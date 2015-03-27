@@ -1,0 +1,38 @@
+Cmp-Mod V01 Created by Cvpcb (2014-12-04 BZR 5312)-product   date = 3/27/2015 3:03:56 PM
+
+BeginCmp
+TimeStamp = /5515A6DB;
+Reference = D1;
+ValeurCmp = LED;
+IdModule  = custom_footprints:SMD-0402_LED;
+EndCmp
+
+BeginCmp
+TimeStamp = /5515A7BB;
+Reference = D2;
+ValeurCmp = LED;
+IdModule  = custom_footprints:SMD-0402_LED;
+EndCmp
+
+BeginCmp
+TimeStamp = /5515A7E8;
+Reference = D3;
+ValeurCmp = LED;
+IdModule  = custom_footprints:SMD-0402_LED;
+EndCmp
+
+BeginCmp
+TimeStamp = /5515A826;
+Reference = R1;
+ValeurCmp = R;
+IdModule  = Resistors_SMD:R_0402;
+EndCmp
+
+BeginCmp
+TimeStamp = /5515A9E2;
+Reference = U1;
+ValeurCmp = 4pin_light_conn;
+IdModule  = custom_footprints:4_pin_light_conn;
+EndCmp
+
+EndListe
