@@ -30,6 +30,7 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:Custom_components
+LIBS:turnout_controller-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -175,13 +176,13 @@ F 3 "" H 2200 4100 60  0000 C CNN
 	1    2350 4100
 	-1   0    0    1   
 $EndComp
-Text GLabel 2700 4550 3    51   Input ~ 0
+Text GLabel 2700 5200 3    51   Input ~ 0
 CP1
-Text GLabel 2500 4550 3    51   Input ~ 0
+Text GLabel 2500 5200 3    51   Input ~ 0
 CP2
-Text GLabel 2300 4550 3    51   Input ~ 0
+Text GLabel 2300 5200 3    51   Input ~ 0
 CP3
-Text GLabel 2100 4550 3    51   Input ~ 0
+Text GLabel 2100 5200 3    51   Input ~ 0
 CP4
 $Comp
 L I2C_conn_2pin conn1
@@ -291,7 +292,7 @@ F 3 "" H 5650 4850 60  0000 C CNN
 $EndComp
 Wire Wire Line
 	5650 4600 5650 4850
-Text GLabel 5850 4600 3    60   Input ~ 0
+Text GLabel 6050 4600 3    60   Input ~ 0
 SERVO_SIGNAL
 $Comp
 L SPI_PORT_6pin U2
@@ -393,7 +394,7 @@ Wire Wire Line
 	2050 1000 2350 1000
 Wire Wire Line
 	2350 1000 2350 850 
-Text GLabel 6050 4600 3    60   Input ~ 0
+Text GLabel 5850 4600 3    60   Input ~ 0
 SERVO_POSITIVE
 $Comp
 L Detector_conn_4pin U3
@@ -456,4 +457,64 @@ Text GLabel 3050 2050 1    47   Input ~ 0
 VIN
 Wire Wire Line
 	3050 2050 3050 2200
+$Comp
+L R R1
+U 1 1 5523056D
+P 2100 4900
+F 0 "R1" V 2180 4900 40  0000 C CNN
+F 1 "R" V 2107 4901 40  0000 C CNN
+F 2 "Resistors_SMD:R_0402" V 2030 4900 30  0001 C CNN
+F 3 "" H 2100 4900 30  0000 C CNN
+	1    2100 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R2
+U 1 1 55230590
+P 2300 4900
+F 0 "R2" V 2380 4900 40  0000 C CNN
+F 1 "R" V 2307 4901 40  0000 C CNN
+F 2 "Resistors_SMD:R_0402" V 2230 4900 30  0001 C CNN
+F 3 "" H 2300 4900 30  0000 C CNN
+	1    2300 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R3
+U 1 1 552305A9
+P 2500 4900
+F 0 "R3" V 2580 4900 40  0000 C CNN
+F 1 "R" V 2507 4901 40  0000 C CNN
+F 2 "Resistors_SMD:R_0402" V 2430 4900 30  0001 C CNN
+F 3 "" H 2500 4900 30  0000 C CNN
+	1    2500 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R4
+U 1 1 552305C6
+P 2700 4900
+F 0 "R4" V 2780 4900 40  0000 C CNN
+F 1 "R" V 2707 4901 40  0000 C CNN
+F 2 "Resistors_SMD:R_0402" V 2630 4900 30  0001 C CNN
+F 3 "" H 2700 4900 30  0000 C CNN
+	1    2700 4900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2100 4550 2100 4650
+Wire Wire Line
+	2300 4550 2300 4650
+Wire Wire Line
+	2500 4550 2500 4650
+Wire Wire Line
+	2700 4550 2700 4650
+Wire Wire Line
+	2700 5150 2700 5200
+Wire Wire Line
+	2500 5150 2500 5200
+Wire Wire Line
+	2300 5150 2300 5200
+Wire Wire Line
+	2100 5150 2100 5200
 $EndSCHEMATC
