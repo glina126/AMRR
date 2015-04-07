@@ -144,17 +144,6 @@ F 3 "" H 5200 4100 60  0000 C CNN
 $EndComp
 Text GLabel 3950 3650 0    60   Input ~ 0
 VIN
-$Comp
-L R R1
-U 1 1 5515A826
-P 4350 3650
-F 0 "R1" V 4430 3650 40  0000 C CNN
-F 1 "R" V 4357 3651 40  0000 C CNN
-F 2 "Resistors_SMD:R_0402" V 4280 3650 30  0001 C CNN
-F 3 "" H 4350 3650 30  0000 C CNN
-	1    4350 3650
-	0    1    1    0   
-$EndComp
 Text GLabel 5700 3200 2    60   Input ~ 0
 PIN1
 Text GLabel 5700 3650 2    60   Input ~ 0
@@ -162,9 +151,7 @@ PIN2
 Text GLabel 5700 4100 2    60   Input ~ 0
 PIN3
 Wire Wire Line
-	3950 3650 4100 3650
-Wire Wire Line
-	4600 3650 5000 3650
+	3950 3650 5000 3650
 Wire Wire Line
 	4800 3200 4800 4100
 Wire Wire Line
