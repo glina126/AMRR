@@ -1,0 +1,115 @@
+Cmp-Mod V01 Created by Cvpcb (2014-12-04 BZR 5312)-product   date = 4/6/2015 5:59:14 PM
+
+BeginCmp
+TimeStamp = /550C4541;
+Reference = C1;
+ValeurCmp = 0.33uF;
+IdModule  = Capacitors_SMD:C_0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /550C4566;
+Reference = C2;
+ValeurCmp = 0.1uF;
+IdModule  = Capacitors_SMD:C_0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /550B1A0D;
+Reference = C3;
+ValeurCmp = C;
+IdModule  = Capacitors_SMD:C_0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /550C6329;
+Reference = conn1;
+ValeurCmp = I2C_conn_2pin;
+IdModule  = custom_footprints:I2C_conn_2pin;
+EndCmp
+
+BeginCmp
+TimeStamp = /550C63FC;
+Reference = conn2;
+ValeurCmp = POWER_CONN;
+IdModule  = custom_footprints:PWR_CONN_1.27mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /550C44D3;
+Reference = IC1;
+ValeurCmp = L79L05ACD13TR_LDO;
+IdModule  = custom_footprints:SO8-L79L;
+EndCmp
+
+BeginCmp
+TimeStamp = /550C55AF;
+Reference = IC2;
+ValeurCmp = CharliPlexLED-4pin;
+IdModule  = custom_footprints:Charliplex_LED_4pin;
+EndCmp
+
+BeginCmp
+TimeStamp = /550B19CC;
+Reference = IC3;
+ValeurCmp = ATTINY841-SSU;
+IdModule  = Housings_SOIC:SOIC-14_3.9x8.7mm_Pitch1.27mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /550C6457;
+Reference = Q1;
+ValeurCmp = NPN;
+IdModule  = Housings_SOT-23_SOT-143_TSOT-6:SOT-23;
+EndCmp
+
+BeginCmp
+TimeStamp = /5523056D;
+Reference = R1;
+ValeurCmp = R;
+IdModule  = Resistors_SMD:R_0402;
+EndCmp
+
+BeginCmp
+TimeStamp = /55230590;
+Reference = R2;
+ValeurCmp = R;
+IdModule  = Resistors_SMD:R_0402;
+EndCmp
+
+BeginCmp
+TimeStamp = /552305A9;
+Reference = R3;
+ValeurCmp = R;
+IdModule  = Resistors_SMD:R_0402;
+EndCmp
+
+BeginCmp
+TimeStamp = /552305C6;
+Reference = R4;
+ValeurCmp = R;
+IdModule  = Resistors_SMD:R_0402;
+EndCmp
+
+BeginCmp
+TimeStamp = /550C96AD;
+Reference = U1;
+ValeurCmp = SERVO_CONN_3pin;
+IdModule  = custom_footprints:SERVO_CONN_3pin_corrected;
+EndCmp
+
+BeginCmp
+TimeStamp = /550C9EBE;
+Reference = U2;
+ValeurCmp = SPI_PORT_6pin;
+IdModule  = custom_footprints:SPI_PORT_6pin;
+EndCmp
+
+BeginCmp
+TimeStamp = /550CB55C;
+Reference = U3;
+ValeurCmp = Detector_conn_4pin;
+IdModule  = custom_footprints:Detector_conn_4pin;
+EndCmp
+
+EndListe

@@ -1,0 +1,67 @@
+(export (version D)
+  (design
+    (source C:\KiCad\Projects\AMRR\detector_block\detector_block.sch)
+    (date "4/7/2015 9:06:14 PM")
+    (tool "Eeschema (2014-12-04 BZR 5312)-product"))
+  (components
+    (comp (ref R1)
+      (value R)
+      (libsource (lib device) (part R))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 55247CAD))
+    (comp (ref Ph1)
+      (value Photoresistor)
+      (libsource (lib Custom_components) (part Photoresistor))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 55247EAF))
+    (comp (ref conn1)
+      (value 3pin_1.27mm)
+      (libsource (lib Custom_components) (part 3pin_1.27mm))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 5524807A)))
+  (libparts
+    (libpart (lib device) (part R)
+      (description Resistance)
+      (footprints
+        (fp R?)
+        (fp SM0603)
+        (fp SM0805)
+        (fp R?-*)
+        (fp SM1206))
+      (fields
+        (field (name Reference) R)
+        (field (name Value) R))
+      (pins
+        (pin (num 1) (name ~) (type passive))
+        (pin (num 2) (name ~) (type passive))))
+    (libpart (lib Custom_components) (part Photoresistor)
+      (fields
+        (field (name Reference) Ph)
+        (field (name Value) Photoresistor))
+      (pins
+        (pin (num 1) (name ~) (type input))
+        (pin (num 2) (name ~) (type input))))
+    (libpart (lib Custom_components) (part 3pin_1.27mm)
+      (fields
+        (field (name Reference) conn)
+        (field (name Value) 3pin_1.27mm))
+      (pins
+        (pin (num 1) (name 5V) (type input))
+        (pin (num 2) (name Signal) (type input))
+        (pin (num 3) (name GND) (type input)))))
+  (libraries
+    (library (logical device)
+      (uri C:\KiCad\share\library\device.lib))
+    (library (logical Custom_components)
+      (uri "C:\\KiCad\\Custom Libraries\\Schematics\\Custom_components.lib")))
+  (nets
+    (net (code 1) (name "Net-(R1-Pad1)")
+      (node (ref R1) (pin 1))
+      (node (ref conn1) (pin 3)))
+    (net (code 2) (name "Net-(Ph1-Pad1)")
+      (node (ref Ph1) (pin 1))
+      (node (ref conn1) (pin 1)))
+    (net (code 3) (name "Net-(Ph1-Pad2)")
+      (node (ref R1) (pin 2))
+      (node (ref Ph1) (pin 2))
+      (node (ref conn1) (pin 2)))))

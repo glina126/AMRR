@@ -1,0 +1,24 @@
+Cmp-Mod V01 Created by Cvpcb (2014-12-04 BZR 5312)-product   date = 4/7/2015 9:19:14 PM
+
+BeginCmp
+TimeStamp = /5524807A;
+Reference = conn1;
+ValeurCmp = 3pin_1.27mm;
+IdModule  = custom_project_specific:1.27mm_1x3_detector;
+EndCmp
+
+BeginCmp
+TimeStamp = /55247EAF;
+Reference = Ph1;
+ValeurCmp = Photoresistor;
+IdModule  = LEDs:LED-5MM;
+EndCmp
+
+BeginCmp
+TimeStamp = /55247CAD;
+Reference = R1;
+ValeurCmp = R;
+IdModule  = Resistors_SMD:R_0603;
+EndCmp
+
+EndListe
