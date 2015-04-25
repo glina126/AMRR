@@ -37,10 +37,10 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "turnoutcontroller"
-Date ""
-Rev ""
+Date "Friday, April 24, 2015"
+Rev "0.1"
 Comp ""
-Comment1 ""
+Comment1 "revsion 0.1: added extra footprints and added space to accompany for connectors"
 Comment2 ""
 Comment3 ""
 Comment4 ""
@@ -171,7 +171,7 @@ U 1 1 550C55AF
 P 2350 4100
 F 0 "IC2" H 1850 4600 60  0000 C CNN
 F 1 "CharliPlexLED-4pin" H 2350 3950 60  0000 C CNN
-F 2 "custom_footprints:Charliplex_LED_4pin" H 2200 4100 60  0001 C CNN
+F 2 "custom_footprints:Charliplex_LED_4x4pin" H 2200 4100 60  0001 C CNN
 F 3 "" H 2200 4100 60  0000 C CNN
 	1    2350 4100
 	-1   0    0    1   
@@ -274,7 +274,7 @@ U 1 1 550C96AD
 P 5850 4400
 F 0 "U1" H 6200 3800 60  0000 C CNN
 F 1 "SERVO_CONN_3pin" H 5850 3950 60  0000 C CNN
-F 2 "custom_footprints:SERVO_CONN_3pin_corrected" H 5850 4400 60  0001 C CNN
+F 2 "custom_footprints:servo_conn_1x03" H 5850 4400 60  0001 C CNN
 F 3 "" H 5850 4400 60  0000 C CNN
 	1    5850 4400
 	-1   0    0    1   
@@ -400,9 +400,9 @@ $Comp
 L Detector_conn_4pin U3
 U 1 1 550CB55C
 P 9150 4350
-F 0 "U3" H 8750 4500 60  0000 C CNN
-F 1 "Detector_conn_4pin" H 9150 3950 60  0000 C CNN
-F 2 "custom_footprints:Detector_conn_4pin" H 9150 4350 60  0001 C CNN
+F 0 "U3" H 9200 3850 60  0000 C CNN
+F 1 "Detector_conn_3pin" H 9150 3950 60  0000 C CNN
+F 2 "custom_footprints:block_3pin_corrected" H 9150 4350 60  0001 C CNN
 F 3 "" H 9150 4350 60  0000 C CNN
 	1    9150 4350
 	-1   0    0    1   
@@ -439,7 +439,7 @@ Wire Wire Line
 	9100 4700 9100 4500
 Text GLabel 9250 4500 3    60   Input ~ 0
 A1
-Text GLabel 9400 4500 3    60   Input ~ 0
+Text GLabel 9250 5550 3    60   Input ~ 0
 A0
 Wire Notes Line
 	1150 600  1150 1250
@@ -458,45 +458,135 @@ VIN
 Wire Wire Line
 	3050 2050 3050 2200
 $Comp
+L POWER_CONN conn4
+U 1 1 553A902A
+P 4700 5400
+F 0 "conn4" H 4400 5600 51  0000 C CNN
+F 1 "POWER_CONN" H 4700 5050 51  0000 C CNN
+F 2 "custom_footprints:PWR_CONN_1.27mm" H 4700 5400 51  0001 C CNN
+F 3 "" H 4700 5400 51  0000 C CNN
+	1    4700 5400
+	-1   0    0    1   
+$EndComp
+$Comp
+L GND #PWR015
+U 1 1 553A908D
+P 4600 5900
+F 0 "#PWR015" H 4600 5900 30  0001 C CNN
+F 1 "GND" H 4600 5830 30  0001 C CNN
+F 2 "" H 4600 5900 60  0000 C CNN
+F 3 "" H 4600 5900 60  0000 C CNN
+	1    4600 5900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4600 5600 4600 5900
+Text GLabel 4800 5700 3    51   Input ~ 0
+VIN
+Wire Wire Line
+	4800 5700 4800 5600
+$Comp
+L Detector_conn_4pin U4
+U 1 1 553A95EC
+P 9150 5300
+F 0 "U4" H 8850 5450 60  0000 C CNN
+F 1 "Detector_conn_3pin" H 9150 4900 60  0000 C CNN
+F 2 "custom_footprints:block_3pin_corrected" H 9150 5300 60  0001 C CNN
+F 3 "" H 9150 5300 60  0000 C CNN
+	1    9150 5300
+	-1   0    0    1   
+$EndComp
+$Comp
+L GND #PWR016
+U 1 1 553A962F
+P 9100 5650
+F 0 "#PWR016" H 9100 5650 30  0001 C CNN
+F 1 "GND" H 9100 5580 30  0001 C CNN
+F 2 "" H 9100 5650 60  0000 C CNN
+F 3 "" H 9100 5650 60  0000 C CNN
+	1    9100 5650
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR017
+U 1 1 553A9643
+P 8650 5200
+F 0 "#PWR017" H 8650 5290 20  0001 C CNN
+F 1 "+5V" H 8650 5290 30  0000 C CNN
+F 2 "" H 8650 5200 60  0000 C CNN
+F 3 "" H 8650 5200 60  0000 C CNN
+	1    8650 5200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9250 5450 9250 5550
+Wire Wire Line
+	9100 5450 9100 5650
+Wire Wire Line
+	8950 5450 8950 5550
+Wire Wire Line
+	8950 5550 8650 5550
+Wire Wire Line
+	8650 5550 8650 5200
+$Comp
+L I2C_conn_2pin conn3
+U 1 1 553A9A26
+P 3600 5400
+F 0 "conn3" H 3300 5600 51  0000 C CNN
+F 1 "I2C_conn_2pin" H 3600 5050 51  0000 C CNN
+F 2 "custom_footprints:I2C_conn_2pin" H 3600 5400 51  0001 C CNN
+F 3 "" H 3600 5400 51  0000 C CNN
+	1    3600 5400
+	-1   0    0    1   
+$EndComp
+Text GLabel 3500 5700 3    51   Input ~ 0
+SCL
+Text GLabel 3700 5700 3    51   Input ~ 0
+SDA
+Wire Wire Line
+	3500 5600 3500 5700
+Wire Wire Line
+	3700 5600 3700 5700
+$Comp
 L R R1
-U 1 1 5523056D
+U 1 1 553AB10B
 P 2100 4900
 F 0 "R1" V 2180 4900 40  0000 C CNN
 F 1 "R" V 2107 4901 40  0000 C CNN
-F 2 "Resistors_SMD:R_0402" V 2030 4900 30  0001 C CNN
+F 2 "Resistors_SMD:R_0603" V 2030 4900 30  0001 C CNN
 F 3 "" H 2100 4900 30  0000 C CNN
 	1    2100 4900
 	1    0    0    -1  
 $EndComp
 $Comp
 L R R2
-U 1 1 55230590
+U 1 1 553AB193
 P 2300 4900
 F 0 "R2" V 2380 4900 40  0000 C CNN
 F 1 "R" V 2307 4901 40  0000 C CNN
-F 2 "Resistors_SMD:R_0402" V 2230 4900 30  0001 C CNN
+F 2 "Resistors_SMD:R_0603" V 2230 4900 30  0001 C CNN
 F 3 "" H 2300 4900 30  0000 C CNN
 	1    2300 4900
 	1    0    0    -1  
 $EndComp
 $Comp
 L R R3
-U 1 1 552305A9
+U 1 1 553AB1AE
 P 2500 4900
 F 0 "R3" V 2580 4900 40  0000 C CNN
 F 1 "R" V 2507 4901 40  0000 C CNN
-F 2 "Resistors_SMD:R_0402" V 2430 4900 30  0001 C CNN
+F 2 "Resistors_SMD:R_0603" V 2430 4900 30  0001 C CNN
 F 3 "" H 2500 4900 30  0000 C CNN
 	1    2500 4900
 	1    0    0    -1  
 $EndComp
 $Comp
 L R R4
-U 1 1 552305C6
+U 1 1 553AB1CF
 P 2700 4900
 F 0 "R4" V 2780 4900 40  0000 C CNN
 F 1 "R" V 2707 4901 40  0000 C CNN
-F 2 "Resistors_SMD:R_0402" V 2630 4900 30  0001 C CNN
+F 2 "Resistors_SMD:R_0603" V 2630 4900 30  0001 C CNN
 F 3 "" H 2700 4900 30  0000 C CNN
 	1    2700 4900
 	1    0    0    -1  

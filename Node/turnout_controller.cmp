@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by Cvpcb (2014-12-04 BZR 5312)-product   date = 4/6/2015 5:59:14 PM
+Cmp-Mod V01 Created by Cvpcb (2014-12-04 BZR 5312)-product   date = 4/24/2015 4:56:36 PM
 
 BeginCmp
 TimeStamp = /550C4541;
@@ -36,6 +36,20 @@ IdModule  = custom_footprints:PWR_CONN_1.27mm;
 EndCmp
 
 BeginCmp
+TimeStamp = /553A9A26;
+Reference = conn3;
+ValeurCmp = I2C_conn_2pin;
+IdModule  = custom_footprints:I2C_conn_2pin;
+EndCmp
+
+BeginCmp
+TimeStamp = /553A902A;
+Reference = conn4;
+ValeurCmp = POWER_CONN;
+IdModule  = custom_footprints:PWR_CONN_1.27mm;
+EndCmp
+
+BeginCmp
 TimeStamp = /550C44D3;
 Reference = IC1;
 ValeurCmp = L79L05ACD13TR_LDO;
@@ -46,7 +60,7 @@ BeginCmp
 TimeStamp = /550C55AF;
 Reference = IC2;
 ValeurCmp = CharliPlexLED-4pin;
-IdModule  = custom_footprints:Charliplex_LED_4pin;
+IdModule  = custom_footprints:Charliplex_LED_4x4pin;
 EndCmp
 
 BeginCmp
@@ -64,38 +78,38 @@ IdModule  = Housings_SOT-23_SOT-143_TSOT-6:SOT-23;
 EndCmp
 
 BeginCmp
-TimeStamp = /5523056D;
+TimeStamp = /553AB10B;
 Reference = R1;
 ValeurCmp = R;
-IdModule  = Resistors_SMD:R_0402;
+IdModule  = Resistors_SMD:R_0603;
 EndCmp
 
 BeginCmp
-TimeStamp = /55230590;
+TimeStamp = /553AB193;
 Reference = R2;
 ValeurCmp = R;
-IdModule  = Resistors_SMD:R_0402;
+IdModule  = Resistors_SMD:R_0603;
 EndCmp
 
 BeginCmp
-TimeStamp = /552305A9;
+TimeStamp = /553AB1AE;
 Reference = R3;
 ValeurCmp = R;
-IdModule  = Resistors_SMD:R_0402;
+IdModule  = Resistors_SMD:R_0603;
 EndCmp
 
 BeginCmp
-TimeStamp = /552305C6;
+TimeStamp = /553AB1CF;
 Reference = R4;
 ValeurCmp = R;
-IdModule  = Resistors_SMD:R_0402;
+IdModule  = Resistors_SMD:R_0603;
 EndCmp
 
 BeginCmp
 TimeStamp = /550C96AD;
 Reference = U1;
 ValeurCmp = SERVO_CONN_3pin;
-IdModule  = custom_footprints:SERVO_CONN_3pin_corrected;
+IdModule  = custom_footprints:servo_conn_1x03;
 EndCmp
 
 BeginCmp
@@ -108,8 +122,15 @@ EndCmp
 BeginCmp
 TimeStamp = /550CB55C;
 Reference = U3;
-ValeurCmp = Detector_conn_4pin;
-IdModule  = custom_footprints:Detector_conn_4pin;
+ValeurCmp = Detector_conn_3pin;
+IdModule  = custom_footprints:block_3pin_corrected;
+EndCmp
+
+BeginCmp
+TimeStamp = /553A95EC;
+Reference = U4;
+ValeurCmp = Detector_conn_3pin;
+IdModule  = custom_footprints:block_3pin_corrected;
 EndCmp
 
 EndListe
